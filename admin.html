@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Side Navigation Popup</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(231, 214, 214);
+    font-family: cursive;
+    font-size: 1.2em;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a, button {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    background-color: #333;
+    border: none;
+  }
+
+  .sidenav a:hover, button:hover{
+    color: #f1f1f1;
+  }
+
+  .openbtn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+    #user, #home, #logs, #payment{
+    margin-left: 70vh;
+    margin-bottom: 100vh;
+    }
+
+    th, td{
+      padding: 10px 10px 10px ;
+    }
+</style>
+</head>
+<body>
+  <button class="openbtn" onclick="openNav()">☰ Open</button>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#home">Home</a>
+    <a href="#logs">Print Queue</a>
+    <a href="#payment">Payment</a>
+    <a href="#user">User Management</a>
+    <button>logout</button>
+  </div>
+  <div id="home">
+    <h1>welcome home sweet Home</h1>
+    <p>wakuu mtaniua na html asee nimeteseka kinoma ........ naombeni updates</p>
+  </div>
+  <div id="logs">
+    <table border="1px">
+        <tr>
+        <th>Document ID</th>
+        <th>User ID</th>
+        <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>time</td>
+            <td>time</td>
+            <td>time</td>
+        </tr>
+
+        <tr>
+            <td>time</td>
+            <td>time</td>
+            <td>time</td>
+        </tr>
+            <tr>
+                <td>time</td>
+                <td>time</td>
+                <td>time</td>
+            </tr>
+    </table>
+  </div>
+  <div id="payment">
+    <table border="1">
+      <tr>
+          <th>Receipts ID</th>
+          <th>Amount</th>
+          <th>User ID</th>
+          <th>Date and time</th>
+      </tr>
+  
+      <tr>
+          <td>logs</td>
+          <td>logs</td>
+          <td>logs</td>
+          <td>01.01.2023 12:45 PM</td>
+      </tr>
+  
+      <tr>
+          <td>logs</td>
+          <td>logs</td>
+          <td>logs</td>
+          <td>01.01.2023 12:45 PM</td>
+      </tr>
+      <tr>
+          <td>logs</td>
+          <td>logs</td>
+          <td>logs</td>
+          <td>01.01.2023 12:45 PM</td>
+      </tr>
+  </table>
+  </div>
+
+  <div id="user">
+    <h3>Total User accounts</h3>
+    <input type="number" name="number" id="number" min="0"> <br>
+    <ul>
+        <li><a href="#">Create user</a></li>
+        <li><a href="#">Modify User</a></li>
+        <li><a href="#">Delete user</a></li>
+    </ul>
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</body>
+</html>
